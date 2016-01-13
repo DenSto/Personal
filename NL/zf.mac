@@ -1,0 +1,8 @@
+set terminal postscript enhanced color
+set output 'zf.ps'
+set pm3d map
+set isosamples 10000
+set xrange [0:xr]
+set yrange [0:yr]
+set palette defined (-1 "blue", 0 "white", 1 "red")
+plot 'zf_set' using 1:2:3 with image

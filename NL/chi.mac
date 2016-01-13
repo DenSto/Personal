@@ -1,0 +1,3 @@
+set terminal postscript enhanced color
+set output 'chi.ps'
+plot 'chi_set' using 1:2 w l 

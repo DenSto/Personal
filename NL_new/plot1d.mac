@@ -1,0 +1,7 @@
+set terminal postscript enhanced color
+set output sprintf("%s.ps",task)
+set xlabel 't'
+if (exists("xr")) set xrange [0:xr]
+if (exists("yr")) set yrange [0:yr]
+unset key
+plot file using 1:2 w l 

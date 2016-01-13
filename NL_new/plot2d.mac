@@ -1,0 +1,10 @@
+set terminal png
+set output sprintf("%s.png",task)
+set pm3d map
+#set dgrid3d
+if (exists("xr")) set xrange [0:xr]
+if (exists("yr")) set yrange [0:yr]
+set xlabel 't'
+set palette defined (-1 "blue", 0 "white", 1 "red")
+unset key
+splot file using 1:2:3  with pm3d
